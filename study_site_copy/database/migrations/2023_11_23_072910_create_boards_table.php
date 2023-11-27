@@ -17,23 +17,25 @@ return new class extends Migration
         // 보드 : 제목, 전시 시작일, 전시 종료일, 이미지, 전시개요, 주의사항
 // , 전시 장소, 관람시간, 관람 나이, 금액, 전시연계교육(링크), MOKA VR TOUR
         Schema::create('boards', function (Blueprint $table) {
-            $table->id();
+            $table->increments('board_id');
+            $table->integer('user_id');
             $table->string('title', 100);
             $table->date('exhibition_start');
             $table->date('exhibition_end');
-            $table->binary('image');
+            $table->string('category_id', 2);
+            $table->string('image');
             $table->string('content', 3000);
             $table->string('caution', 1000);
             $table->string('location', 1000);
-            $table->integer('opentime', 10);
-            $table->integer('closetime', 10);
-            $table->integer('admission_fee', 10);
+            $table->datetime('opentime');
+            $table->datetime('closetime');
+            $table->integer('admission_fee');
             $table->string('link', 1000);
             $table->timestamps();
             $table->softDeletes();
         });
     }
-
+// img 서버 폴더를 새로 만들어서 이미지 link를 불러오는 방식
     /**
      * Reverse the migrations.
      *

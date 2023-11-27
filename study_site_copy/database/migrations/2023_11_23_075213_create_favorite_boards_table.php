@@ -14,15 +14,13 @@ return new class extends Migration
     public function up()
     {
 
-        // 이름, 아이디, 비밀번호, 비밀번호 확인
+        // user_id, board_id foriegn 키 연결
         Schema::create('favorite_boards', function (Blueprint $table) {
-            $table->id();
-            $table->string('email')->unique;
-            $table->string('password', 512);
-            $table->string('name', 50);
+            $table->increments('favorite_boards_id');
+            $table->integer('user_id');
+            $table->integer('board_id');
             $table->timestamps();
             $table->softDeletes();
-            
         });
     }
 

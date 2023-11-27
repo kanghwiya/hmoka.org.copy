@@ -1,0 +1,38 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+* { 
+    font-family: 'Noto Sans KR', sans-serif;
+    color: rgb(95, 95, 95);
+}
+
+/* 헤더 */
+header {
+    display: block;
+    height: 300px;
+}
+h1 {
+    display: inline-block;
+}
+/* 메인 */
+button {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: bolder;
+}
+button:hover {
+    color: rgba(25, 25, 25, 1);
+    border-bottom: 1px solid rgb(118, 185, 185);
+}
+
+a:hover  {
+    color: rgba(25, 25, 25, 1);
+}
+
+
+/* 푸터 */
+footer {
+    background-color: rgb(232, 232, 232, 1);
+    height: 300px;
+    font-size: 0.8rem;
+}
