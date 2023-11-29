@@ -20,23 +20,25 @@
             <br>
             <span>현대백화점 판교점 Office H,</span>
             <a target="_blank" href="mailto:info@hmoka.org">info@hmoka.org</a>
-            <select name="footer_select" onchange="window.open(value,'_blank');">
-                <option value="0" selected disabled hidden>패밀리사이트</option>
-                <option value="https://www.ehyundai.com/gate.do">(주)현대백화점</option>
-                <option value="https://www.ehyundai.com/newPortal/sc/main/main.do">현대백화점 사회공헌</option>
-            </select>
-            <a href="https://www.instagram.com/hmoka3700/">
-                <img src="/img/ico_sns_insta.png" alt="">
-            </a>
-            <a href="https://post.naver.com/my.nhn?memberNo=33150240">
-                <img src="/img/ico_sns_naver.png" alt="">
-            </a>
-            <a href="https://www.youtube.com/channel/UCDIpOmAfc_-yf5QE002RBSw">
-                <img src="/img/ico_sns_youtube.png" alt="">
-            </a>
-            <a target="_blank" href="mailto:info@hmoka.org">
-                <img src="/img/ico_sns_email.png" alt="">
-            </a>
+            <div class="footer-sns-link">
+                <select name="footer_select" onchange="window.open(value,'_blank');">
+                    <option value="0" selected disabled hidden>패밀리사이트</option>
+                    <option value="https://www.ehyundai.com/gate.do">(주)현대백화점</option>
+                    <option value="https://www.ehyundai.com/newPortal/sc/main/main.do">현대백화점 사회공헌</option>
+                </select>
+                <a href="https://www.instagram.com/hmoka3700/">
+                    <img src="/img/ico_sns_insta.png" alt="">
+                </a>
+                <a href="https://post.naver.com/my.nhn?memberNo=33150240">
+                    <img src="/img/ico_sns_naver.png" alt="">
+                </a>
+                <a href="https://www.youtube.com/channel/UCDIpOmAfc_-yf5QE002RBSw">
+                    <img src="/img/ico_sns_youtube.png" alt="">
+                </a>
+                <a target="_blank" href="mailto:info@hmoka.org">
+                    <img src="/img/ico_sns_email.png" alt="">
+                </a>
+            </div>
         </div>
     </div>
 </footer>

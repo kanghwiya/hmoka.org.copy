@@ -4,16 +4,32 @@
 
 @section('main')
 <main>
-    <br>
-    어쩌고저쩌고
-    <br>
+    <div class="main-content">
+        <div class="grid-first-line">
+            <div class="block1">1</div>
+            <div class="block2">2</div>
+            <div class="block3">3</div>
+        </div>
+        <div class="grid-second-line">
+            <div class="block4">4</div>
+            <div class="block5">5</div>
+        </div>
+        <div class="grid-last-line">
+            <div class="block6">6</div>
+            <div class="block7">7</div>
+        </div>
 
+        {{-- 모달 버튼 --}}
+        <div class="sns-btn">
+            <button type="button" class="sns-modal" id="sns_open_btn">SNS</button>
+        </div>
 
-    
-    {{-- 모달 버튼 --}}
-    <div class="sns-btn">
-        <button type="button" class="sns-modal" id="sns_open_btn">SNS</button>
+        {{-- 최상단으로 가는 버튼 --}}
+        <div class="go-top">
+            <button type="button" class="go-top-btn" id="go-top-btn">ㅗ</button>
+        </div>
     </div>
+
 
     {{-- 모달 --}}
     <div id="modal">
@@ -45,5 +61,6 @@
             </a>
         </div>
     </div>
+
 </main>
 @endsection
