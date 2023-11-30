@@ -1,7 +1,6 @@
 {{-- 로그인 팝업 --}}
 @extends('layout.layout')
 
-
 @section('title', 'login')
 
 @section('main')

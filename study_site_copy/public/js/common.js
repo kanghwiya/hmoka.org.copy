@@ -29,3 +29,24 @@ let scrollTopBtn = document.getElementById('go-top-btn');
 scrollTopBtn.addEventListener('click', function() {
     window.scrollTo(0, 0);
 });
+
+function favorite() {
+    const boardId = document.getElementById('boardId').value;
+    const userId = document.getElementById('userId').value;
+
+    $.ajax({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        type: 'POST',
+        url: '/userfavorite',
+        data: JSON.stringify({ boardId: boardId, userId: userId }),
+        dataType: 'json',
+        success: function(response) {
+            console.log(response);
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    });
+}

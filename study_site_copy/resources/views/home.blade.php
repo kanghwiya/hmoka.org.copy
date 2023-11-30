@@ -5,19 +5,33 @@
 @section('main')
 <main>
     <div class="main-content">
-        <div class="grid-first-line">
-            <div class="block1">1</div>
-            <div class="block2">2</div>
-            <div class="block3">3</div>
-        </div>
-        <div class="grid-second-line">
-            <div class="block4">4</div>
-            <div class="block5">5</div>
-        </div>
-        <div class="grid-last-line">
-            <div class="block6">6</div>
-            <div class="block7">7</div>
-        </div>
+            <div class="grid-first-line">
+                <a class="block1" href="{{ route('board.show', ['board' => $data[0]->board_id])}}">
+                    <div style="background-image: url({{$data[0]->image}}); background-size: cover; cursor: pointer;"></div>
+                </a>
+                <a class="block2" href="{{ route('board.show', ['board' => $data[1]->board_id])}}">
+                    <div style="background-image: url({{$data[1]->image}}); background-size: cover;"></div>
+                </a>
+                <a class="block3" href="{{ route('board.show', ['board' => $data[2]->board_id])}}">
+                    <div style="background-image: url({{$data[2]->image}}); background-size: cover;"></div>
+                </a>
+            </div>
+            <div class="grid-second-line">
+                <a class="block4" href="{{ route('board.show', ['board' => $data[3]->board_id])}}">
+                    <div style="background-image: url({{$data[3]->image}}); background-size: cover;"></div>
+                </a>
+                <a class="block5" href="{{ route('board.show', ['board' => $data[4]->board_id])}}">
+                    <div style="background-image: url({{$data[4]->image}}); background-size: cover;"></div>
+                </a>
+            </div>
+            <div class="grid-last-line">
+                <a class="block6" href="{{ route('board.show', ['board' => $data[5]->board_id])}}">
+                    <div style="background-image: url({{$data[5]->image}}); background-size: cover;"></div>
+                </a>
+                <a class="block7" href="{{ route('board.show', ['board' => $data[6]->board_id])}}">
+                    <div style="background-image: url({{$data[6]->image}}); background-size: cover;"></div>
+                </a>
+            </div>
 
         {{-- 모달 버튼 --}}
         <div class="sns-btn">
@@ -25,42 +39,11 @@
         </div>
 
         {{-- 최상단으로 가는 버튼 --}}
-        <div class="go-top">
-            <button type="button" class="go-top-btn" id="go-top-btn">ㅗ</button>
+        <div>
+            <button type="button" class="go-top-btn" id="go-top-btn"><img src="/img/upbtn.png" alt=""></button>
         </div>
     </div>
 
-
-    {{-- 모달 --}}
-    <div id="modal">
-        <div class="modal-content">
-            <button type="button" class="button-sns-x" id="sns_close_btn">X</button>
-            <div> <img src="/img/sns_title.png" alt=""></div>
-            <a href="https://www.youtube.com/@hmoka3700" target="_blank">
-                <img src="/img/sns_txt01.png" alt="">
-            </a>
-            <br>
-            <a href="https://www.instagram.com/hmoka3700/" target="_blank">
-                <img src="/img/sns_txt02.png" alt="">
-            </a>
-            <br>
-            <a href="https://post.naver.com/my.nhn?memberNo=33150240" target="_blank">
-                <img src="/img/sns_txt03.png" alt="">
-            </a>
-            <br>
-            <a href="#">
-                <img src="/img/sns_txt04.png" alt="">
-            </a>
-            <br>
-            <a href="https://www.spatial.io/s/MOKA-ARTROOM-638460762c816c0001bf2482?share=7328469175120662422" target="_blank">
-                <img src="/img/sns_txt05.png" alt="">
-            </a>
-            <br>
-            <a href="https://hmoka-vacance.org/?lang=ko" target="_blank">
-                <img src="/img/sns_txt06.png" alt="">
-            </a>
-        </div>
-    </div>
 
 </main>
 @endsection

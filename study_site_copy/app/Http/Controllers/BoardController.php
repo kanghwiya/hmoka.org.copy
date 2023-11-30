@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
+use App\Models\Board;
 
 class BoardController extends Controller
 {
@@ -12,9 +15,21 @@ class BoardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function mainget() {
+        // $result = Board::get();
+        $result = DB::table('boards')->get();
+        // var_dump($result);
+        // exit;
+
+        return view('home')->with('data', $result);
+    }
+
+    
     public function index()
     {
         //
+
     }
 
     /**
@@ -47,6 +62,13 @@ class BoardController extends Controller
     public function show($id)
     {
         //
+
+        // $result = Board::find($id);
+        $result = Board::where('board_id', $id)->get();
+        
+        // dump($result);
+        return view('detail')->with('data', $result);
+        
     }
 
     /**
@@ -81,5 +103,17 @@ class BoardController extends Controller
     public function destroy($id)
     {
         //
+    }
+        
+        
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function exhibitionlist() {
+        $result = DB::table('boards')->get();
+        return view('exhibitionlist')->with('data', $result);
     }
 }

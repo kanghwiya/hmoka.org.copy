@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BoardController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\FavoriteBoardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,6 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('main');
 
 Route::get('/login', [UserController::class, 'loginget'])->name('login');
 Route::post('/loginpost', [UserController::class, 'loginpost'])->name('login.post');
@@ -26,4 +24,21 @@ Route::post('/registcomplete', [UserController::class, 'registrationpost'])->nam
 Route::get('/logout', [UserController::class, 'logoutget'])->name('logout');
 
 
+// 보드
 Route::resource('/board', BoardController::class);
+Route::get('/', [BoardController::class, 'mainget'])->name('main.get');
+Route::get('/exhibitionlist', [BoardController::class, 'exhibitionlist'])->name('exhibitionlist');
+
+
+// favorite 보드
+Route::post('/userfavorite', [FavoriteBoardController::class, 'userfavoritepost'])->name('favorite.post');
+Route::get('/favorite', [FavoriteBoardController::class, 'favoriteget'])->name('favorite');
+
+
+// GET|HEAD        board ............................................................................................ board.index › BoardController@index  
+// POST            board ............................................................................................ board.store › BoardController@store  
+// GET|HEAD        board/create ................................................................................... board.create › BoardController@create  
+// GET|HEAD        board/{board} ...................................................................................... board.show › BoardController@show  
+// PUT|PATCH       board/{board} .................................................................................. board.update › BoardController@update  
+// DELETE          board/{board} ................................................................................ board.destroy › BoardController@destroy  
+// GET|HEAD        board/{board}/edit ................................................................................. board.edit › BoardController@edit  
