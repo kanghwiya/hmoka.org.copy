@@ -18,7 +18,8 @@
 
         <div class="detail-content">
             <div class="detail-content-open">전시개요</div>
-            <div>{{$data[0]->content}}</div>
+            <div>{{$data[0]->content}}
+            </div>
         </div>
 
         <div class="detail-caution">

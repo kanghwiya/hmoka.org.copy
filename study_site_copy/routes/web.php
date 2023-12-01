@@ -28,6 +28,7 @@ Route::get('/logout', [UserController::class, 'logoutget'])->name('logout');
 Route::resource('/board', BoardController::class);
 Route::get('/', [BoardController::class, 'mainget'])->name('main.get');
 Route::get('/exhibitionlist', [BoardController::class, 'exhibitionlist'])->name('exhibitionlist');
+Route::get('/exhibitionlist', [BoardController::class, 'exhibitionlist'])->name('exhibitionlist');
 
 
 // favorite 보드

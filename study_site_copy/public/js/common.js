@@ -30,6 +30,8 @@ scrollTopBtn.addEventListener('click', function() {
     window.scrollTo(0, 0);
 });
 
+
+// 보드 좋아요 기능 (수정 필요)
 function favorite() {
     const boardId = document.getElementById('boardId').value;
     const userId = document.getElementById('userId').value;
@@ -49,4 +51,44 @@ function favorite() {
             console.log(error);
         }
     });
+}
+
+
+function presentexhibition() {
+    const exhibition = document.getElementById('exhibitionShow').value;
+    const exhibitionob = JSON.parse(exhibition);
+
+    let today = new Date();
+    let year = today.getFullYear();
+    let month = ('0' + (today.getMonth() + 1)).slice(-2);
+    let day = ('0' + today.getDate()).slice(-2);
+    let dateString = year + '-' + month  + '-' + day;
+    // let currentexhibition
+
+    if(exhibitionob){
+        console.log(exhibitionob);
+        // const [star, setStar] = useState("");
+
+        // useEffect(() => {
+        //     fetch(exhibitionob)
+        //     .then(res => res.json())
+        //     .then(data => setStar(data.exhibitionob.exhibition_end));
+        // }, []);
+        // console.log(star);
+
+
+        let noData = document.getElementById('exhibitionCategory');
+        let noDataTag = document.getElementById("h3");
+        noDataTag.innerHTML = "";
+        noDataTag.innerHTML = "if문 작동함";
+        noData.appendChild(noDataTag);  // noData를 noDataTag의 자식으로 추가
+
+    } else {
+        let noData = document.getElementById('exhibitionCategory');
+        let noDataTag = document.getElementById("h3");
+        noDataTag.innerHTML = "";
+        noDataTag.innerHTML = "현재 진행중인 전시가 없습니다.";
+        noData.appendChild(noDataTag);  // noData를 noDataTag의 자식으로 추가
+    }
+
 }

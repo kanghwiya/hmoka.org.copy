@@ -316,9 +316,8 @@ a:hover  {
     display: grid;
     justify-content: center;
     grid-template-columns: 700px 300px;
-    grid-template-rows: 1fr 200px 1fr 300px;
+    grid-template-rows: 1fr 250px 1fr 250px;
     grid-gap: 30px;
-    height: 100%;
 }
 .detail-title {
     font-size: 1.5rem;
@@ -493,4 +492,29 @@ footer {
     background-color: #eeeeee;
     border-radius: 8px;
     padding: 5px 10px;
+}
+
+/* 카테고리 */
+
+.exhibition-category {
+    background-color: #e3e3e3;
+    font-size: 1.5rem;
+    display: flex;
+    flex-wrap: nowrap;
+    font-weight: bolder;
+}
+.present {
+    margin-left: 350px;
+    padding: 10px 30px;
+}
+.past {
+    padding: 10px 30px;
+}
+.future {
+    padding: 10px 30px;
+}
+.present:hover, .past:hover, .future:hover {
+    background-color: #ffff63;
+    cursor: pointer;
+    border-radius: 10px;
 }
